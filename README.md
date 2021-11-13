@@ -1,2 +1,2 @@
 # image-server-app
-API for uploading and retrieving image using falcon frameworks
+API for uploading and retrieving image using flask frameworks
