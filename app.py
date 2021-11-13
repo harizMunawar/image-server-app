@@ -38,7 +38,7 @@ def upload():
             else:
                 path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             file.save(path)
-            return redirect(url_for('preview', filename=filename, folder=request.args.get('folder')))
+            return redirect(url_for('download', filename=filename, folder=request.args.get('folder')))
     else:
         return '''
             <!doctype html>
