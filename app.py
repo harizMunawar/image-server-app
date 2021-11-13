@@ -13,6 +13,10 @@ app.config['MAX_CONTENT_LENGTH'] = 16 * 1000 * 1000
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+@app.route('/', methods=['GET'])
+def index():
+    return "I'm Alive"
+
 @app.route('/upload', methods=['POST', 'GET'])
 def upload():
     if request.method == 'POST':
